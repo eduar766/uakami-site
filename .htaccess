@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [OR]
+RewriteCond %{HTTP_HOST} ^www.uakami.com$ [NC]
+RewriteRule ^(.*)$ https://uakami.com/$1 [R=301,L]
